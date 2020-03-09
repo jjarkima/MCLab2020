@@ -6,6 +6,9 @@ apply plugin: "kotlin-kapt"
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
+    lintOptions{
+        checkReleaseBuilds false
+    }
     defaultConfig {
         applicationId "com.example.mclab2020"
         minSdkVersion 24
@@ -33,6 +36,9 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     implementation 'com.google.android.material:material:1.0.0'
     kapt "androidx.room:room-compiler:$room_version"
+
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
 }
 repositories {
     mavenCentral()
